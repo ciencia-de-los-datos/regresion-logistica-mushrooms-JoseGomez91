@@ -82,7 +82,7 @@ def pregunta_01():
 
     # Retorne `X` y `y`
     return X, y
-print(pregunta_01())
+#print(pregunta_01())
 
 def pregunta_02():
     """
@@ -90,23 +90,23 @@ def pregunta_02():
     """
 
     # Importe train_test_split
-    from ____ import ____
+    from sklearn.model_selection import train_test_split
 
     # Cargue los datos de ejemplo y asigne los resultados a `X` y `y`.
     X, y = pregunta_01()
 
     # Divida los datos de entrenamiento y prueba. La semilla del generador de números
     # aleatorios es 123. Use 50 patrones para la muestra de prueba.
-    (X_train, X_test, y_train, y_test,) = ____(
-        ____,
-        ____,
-        test_size=____,
-        random_state=____,
+    (X_train, X_test, y_train, y_test,) = train_test_split(
+        X,
+        y,
+        test_size=50,
+        random_state=123,
     )
 
     # Retorne `X_train`, `X_test`, `y_train` y `y_test`
     return X_train, X_test, y_train, y_test
-
+print(pregunta_02())
 
 def pregunta_03():
     """
